@@ -1,0 +1,21 @@
+{
+  "name_of_the_company": "Harish MK's Frontend",
+  "description": "Harish MK's Frontend is a web development company that specializes in building user-friendly and responsive websites using modern technologies like React, Tailwind CSS, and TypeScript. Our goal is to create high-quality, visually appealing websites that provide a seamless user experience.",
+  "services": [
+    {
+      "id": 1,
+      "title": "Web Development",
+      "description": "We build scalable and modern web applications."
+    },
+    {
+      "id": 2,
+      "title": "Mobile Apps",
+      "description": "High-quality mobile applications for Android and iOS."
+    },
+    {
+      "id": 3,
+      "title": "SEO & Marketing",
+      "description": "Improve your online presence with our expert strategies."
+    }
+  ]
+}
