@@ -73,7 +73,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-16 px-4">
+    <section id="services" className="bg-gray-100 dark:bg-gray-900 py-16 px-4">
       <div className="container mx-auto text-center">
         {/* Section Title */}
         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">

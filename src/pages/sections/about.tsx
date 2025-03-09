@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function AboutUs() {
   return (
-    <section className="py-16 px-4 flex justify-center items-center">
+    <section id="about" className="py-16 px-4 flex justify-center items-center">
       <div className="max-w-3xl w-full">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}

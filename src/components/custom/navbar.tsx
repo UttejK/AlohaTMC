@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 import data from "@/assets/data.json";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Industries and Experience", href: "#industries" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -43,13 +44,27 @@ export default function Navbar() {
         {/* Desktop Navigation & Dark Mode Toggle */}
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
-            <Link
+            // <Link
+            //   key={link.name}
+            //   to={link.href}
+            //   className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
+            // >
+            //   {link.name}
+            // </Link>
+            <a
               key={link.name}
-              to={link.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.querySelector(link.href);
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="block text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
 
           {/* Dark Mode Toggle Button */}
@@ -100,14 +115,29 @@ export default function Navbar() {
         )}
       >
         {navLinks.map((link) => (
-          <Link
+          // <Link
+          //   key={link.name}
+          //   to={link.href}
+          //   className="block text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
+          //   onClick={() => setIsOpen(false)}
+          // >
+          //   {link.name}
+          // </Link>
+          <a
             key={link.name}
-            to={link.href}
+            href={link.href}
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.querySelector(link.href);
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false); // Close mobile menu
+              }
+            }}
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
-            onClick={() => setIsOpen(false)}
           >
             {link.name}
-          </Link>
+          </a>
         ))}
       </div>
     </nav>

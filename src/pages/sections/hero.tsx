@@ -5,7 +5,10 @@ import data from "@/assets/data.json";
 export default function Hero() {
   return (
     // Hero Section
-    <section className="flex flex-col items-center justify-center text-center py-20 px-4">
+    <section
+      id="home"
+      className="flex flex-col items-center justify-center text-center py-20 px-4"
+    >
       <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
         Welcome to {data.name_of_the_company}
       </h1>
