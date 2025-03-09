@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import Navbar from "./components/custom/navbar";
+import Footer from "./components/custom/footer";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +30,7 @@ function Layout() {
     <div>
       <Navbar />
       <Outlet />
+      <Footer />
     </div>
   );
 }
