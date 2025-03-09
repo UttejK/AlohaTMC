@@ -1,6 +1,10 @@
 {
-  "name_of_the_company": "Harish MK's Frontend",
-  "description": "Harish MK's Frontend is a web development company that specializes in building user-friendly and responsive websites using modern technologies like React, Tailwind CSS, and TypeScript. Our goal is to create high-quality, visually appealing websites that provide a seamless user experience.",
+  "name_of_the_company": "Aloha TMC",
+  "description": "ATMC specializes in technology innovation and digital solutions development. With technology consulting expertise and proven industry experience that is second to none, ATMC is always at the forefront of helping customers redefine their digital strategies and accelerate their business transformation journey.",
+  "about_us": {
+    "detailed": "At Aloha Technologies and Management Consulting LLC (ATMC), we empower enterprises across the globe to gain a competitive edge by optimizing their perations for maximum efficiency and cost-effectiveness.With over a decade of experience and state-of-the-art development centers in the USA and India, we have established ourselves as a leading provider of Information Technology Services. We are proud to have a team of exceptionally talented and experienced professionals dedicated to delivering world-class IT solutions. Our commitment is to offer innovative and cost-effective services that drive the success of our clients' groundbreaking innovations.",
+    "short": "At Aloha Technologies and Management Consulting LLC (ATMC), we help enterprises gain a competitive edge by optimizing operations for efficiency and cost-effectiveness. With over a decade of experience and development centers in the USA and India, we provide world-class IT services. Our talented team delivers innovative, cost-effective solutions to drive client success."
+  },
   "services": [
     {
       "id": 1,
