@@ -66,22 +66,37 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </Button>
+        {/* Mobile Menu + Dark Mode Toggle */}
+        <div className="md:hidden flex items-center space-x-3">
+          {/* Dark Mode Toggle for Mobile */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? (
+              <Sun className="w-6 h-6 text-yellow-500" />
+            ) : (
+              <Moon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+            )}
+          </Button>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </Button>
+        </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation with Smooth Transition */}
       <div
         className={cn(
-          "md:hidden flex flex-col space-y-2 px-4 pb-4 bg-white dark:bg-gray-900",
-          isOpen ? "block" : "hidden"
+          "md:hidden flex flex-col space-y-2 px-4 pb-4 bg-white dark:bg-gray-900 transition-all duration-300 ease-in-out overflow-hidden",
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}
       >
         {navLinks.map((link) => (
@@ -94,20 +109,6 @@ export default function Navbar() {
             {link.name}
           </Link>
         ))}
-
-        {/* Dark Mode Toggle for Mobile */}
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setDarkMode(!darkMode)}
-          className="self-center mt-2"
-        >
-          {darkMode ? (
-            <Sun className="w-6 h-6 text-yellow-500" />
-          ) : (
-            <Moon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-          )}
-        </Button>
       </div>
     </nav>
   );
