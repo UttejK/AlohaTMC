@@ -1,0 +1,72 @@
+{
+  "industries": [
+    {
+      "id": 0,
+      "name": "Government",
+      "description": "Digital transformation and IT consulting for government agencies.",
+      "headerImage": "/images/industries/government.jpg",
+      "content": "We provide end-to-end IT solutions for government agencies, ensuring compliance, efficiency, and innovation. Our services range from cloud migration to cybersecurity and automation.",
+      "keyOfferings": [
+        "E-Governance Solutions",
+        "Cybersecurity & Compliance",
+        "Automation & Workflow Optimization",
+        "Cloud Infrastructure for Public Sector"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Healthcare",
+      "description": "Testing and automation for healthcare IT solutions.",
+      "headerImage": "/images/industries/healthcare.jpg",
+      "content": "We offer specialized IT solutions for the healthcare industry, including data security, interoperability, and automation testing to ensure high standards of patient care.",
+      "keyOfferings": [
+        "Electronic Health Record (EHR) Systems",
+        "Healthcare Data Security",
+        "Automation & Performance Testing",
+        "Telemedicine & Digital Health Solutions"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Enterprise IT",
+      "description": "Cloud infrastructure and automation solutions for businesses.",
+      "headerImage": "/images/industries/enterprise.jpg",
+      "content": "We provide enterprise IT solutions designed to streamline business operations, improve efficiency, and ensure seamless scalability through cloud and automation technologies.",
+      "keyOfferings": [
+        "Enterprise Resource Planning (ERP)",
+        "AI-driven Automation",
+        "Cloud Migration & Optimization",
+        "Cybersecurity & Risk Management"
+      ]
+    }
+  ],
+  "case-studies": [
+    {
+      "id": 0,
+      "title": "KOLEA MES M&O",
+      "challenge": "Ensuring seamless operational support for Medicaid Eligibility System (MES).",
+      "solution": "Provided extensive functional and automation testing, ensuring reliability and scalability.",
+      "impact": "Enhanced system performance and reduced downtime, benefiting thousands of users.",
+      "headerImage": "/images/case-studies/kolea.jpg",
+      "details": "Our team conducted thorough functional and automation testing for the KOLEA MES platform, identifying critical vulnerabilities and enhancing overall system stability. By leveraging automated regression testing, we reduced deployment time by 40%."
+    },
+    {
+      "id": 1,
+      "title": "BESSD Hawaii",
+      "challenge": "Implementing a robust digital platform for the Benefit, Employment, and Support Services Division.",
+      "solution": "Collaborated with eWorld ES to develop and test an integrated IT system.",
+      "impact": "Improved efficiency in service delivery for social benefit programs in Hawaii.",
+      "headerImage": "/images/case-studies/bessd.jpg",
+      "details": "We played a pivotal role in modernizing the BESSD digital infrastructure. Our team ensured smooth data migration, seamless user experience, and rigorous performance testing to maintain system integrity."
+    },
+    {
+      "id": 2,
+      "title": "AEM for KOLEA",
+      "challenge": "Integrating Adobe Experience Manager (AEM) into Hawaii’s Medicaid system.",
+      "solution": "Performed end-to-end testing and ensured seamless deployment with Hoike Networks.",
+      "impact": "Delivered a user-friendly digital experience for Medicaid applicants and administrators.",
+      "headerImage": "/images/case-studies/aem.jpg",
+      "details": "We worked closely with government stakeholders to integrate AEM with KOLEA, improving content management and digital service delivery. Our performance optimizations resulted in a 30% reduction in page load times."
+    }
+  ]
+}

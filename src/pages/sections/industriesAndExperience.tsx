@@ -1,16 +1,21 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const industries = [
   {
+    id: 0,
     name: "Government",
     description:
       "Digital transformation and IT consulting for government agencies.",
   },
   {
+    id: 1,
     name: "Healthcare",
     description: "Testing and automation for healthcare IT solutions.",
   },
   {
+    id: 2,
     name: "Enterprise IT",
     description:
       "Cloud infrastructure and automation solutions for businesses.",
@@ -19,6 +24,7 @@ const industries = [
 
 const caseStudies = [
   {
+    id: 0,
     title: "KOLEA MES M&O",
     challenge:
       "Ensuring seamless operational support for Medicaid Eligibility System (MES).",
@@ -28,6 +34,7 @@ const caseStudies = [
       "Enhanced system performance and reduced downtime, benefiting thousands of users.",
   },
   {
+    id: 1,
     title: "BESSD Hawaii",
     challenge:
       "Implementing a robust digital platform for the Benefit, Employment, and Support Services Division.",
@@ -37,6 +44,7 @@ const caseStudies = [
       "Improved efficiency in service delivery for social benefit programs in Hawaii.",
   },
   {
+    id: 2,
     title: "AEM for KOLEA",
     challenge:
       "Integrating Adobe Experience Manager (AEM) into Hawaii’s Medicaid system.",
@@ -70,7 +78,7 @@ export default function IndustriesExperience() {
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {industries.map((industry) => (
             <Card
-              key={industry.name}
+              key={industry.id}
               className="bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all"
             >
               <CardHeader>
@@ -82,6 +90,11 @@ export default function IndustriesExperience() {
                 <p className="text-gray-700 dark:text-gray-300">
                   {industry.description}
                 </p>
+                <div className="mt-4 flex justify-center">
+                  <Link to={`/industries/${industry.id}`}>
+                    <Button variant="outline">Learn More</Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -95,7 +108,7 @@ export default function IndustriesExperience() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             {caseStudies.map((caseStudy) => (
               <Card
-                key={caseStudy.title}
+                key={caseStudy.id}
                 className="bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all"
               >
                 <CardHeader>
@@ -114,6 +127,11 @@ export default function IndustriesExperience() {
                   <p className="text-gray-700 dark:text-gray-300 mt-2">
                     <strong>Impact:</strong> {caseStudy.impact}
                   </p>
+                  <div className="mt-4 flex justify-center">
+                    <Link to={`/case-studies/${caseStudy.id}`}>
+                      <Button variant="outline">Read More</Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             ))}

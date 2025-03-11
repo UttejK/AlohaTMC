@@ -6,6 +6,8 @@ import AboutPage from "./pages/aboutPage";
 import ContactUsPage from "./pages/contactUsPage";
 import Home from "./pages/home";
 import Services from "./pages/sections/services";
+import IndustriesExperience from "./pages/sections/industriesAndExperience";
+import IndustryCaseStudyItem from "./components/industryCaseStudy";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +29,14 @@ function App() {
         {
           element: <ServiceDetail />,
           path: "/services/:id",
+        },
+        {
+          element: <IndustriesExperience />,
+          path: "/industries",
+        },
+        {
+          element: <IndustryCaseStudyItem />,
+          path: "/:type/:id",
         },
         {
           element: <AboutPage />,

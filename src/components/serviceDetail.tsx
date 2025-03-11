@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import servicesData from "@/assets/services.json";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "./ui/button";
 
 type serviceType = {
@@ -22,7 +22,7 @@ type serviceType = {
   content: string;
   features: string[];
 };
-export const iconMap = {
+const iconMap = {
   Smartphone: (
     <Smartphone className="w-10 h-10 text-blue-600 dark:text-blue-400" />
   ),
@@ -41,7 +41,9 @@ export const iconMap = {
 
 export default function ServiceDetail() {
   const { id } = useParams();
-  const [service, setService] = useState<serviceType>();
+  const [service, setService] = useState<serviceType | null>(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const selectedService = servicesData.find((s) => s.id === Number(id));
@@ -77,7 +79,14 @@ export default function ServiceDetail() {
           ))}
         </ul>
 
-        <Button className="mt-6">Get in Touch</Button>
+        <Button
+          className="mt-6"
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          Get in Touch
+        </Button>
       </div>
     </section>
   );
