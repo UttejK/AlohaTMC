@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Smartphone,
   Cloud,
@@ -101,6 +103,11 @@ export default function Services() {
                 <p className="text-gray-700 dark:text-gray-300 text-center">
                   {service.description}
                 </p>
+                <div className="mt-4 flex justify-center">
+                  <Link to={`/services/${service.id}`}>
+                    <Button variant="outline">Learn More</Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}

@@ -15,7 +15,7 @@ const contactSchema = z.object({
 
 type ContactForm = z.infer<typeof contactSchema>;
 
-export default function ContactUs() {
+export default function ContactUPage() {
   const {
     register,
     handleSubmit,

@@ -4,22 +4,5 @@
   "about_us": {
     "detailed": "At Aloha Technologies and Management Consulting LLC (ATMC), we empower enterprises across the globe to gain a competitive edge by optimizing their perations for maximum efficiency and cost-effectiveness.With over a decade of experience and state-of-the-art development centers in the USA and India, we have established ourselves as a leading provider of Information Technology Services. We are proud to have a team of exceptionally talented and experienced professionals dedicated to delivering world-class IT solutions. Our commitment is to offer innovative and cost-effective services that drive the success of our clients' groundbreaking innovations.",
     "short": "At Aloha Technologies and Management Consulting LLC (ATMC), we help enterprises gain a competitive edge by optimizing operations for efficiency and cost-effectiveness. With over a decade of experience and development centers in the USA and India, we provide world-class IT services. Our talented team delivers innovative, cost-effective solutions to drive client success."
-  },
-  "services": [
-    {
-      "id": 1,
-      "title": "Web Development",
-      "description": "We build scalable and modern web applications."
-    },
-    {
-      "id": 2,
-      "title": "Mobile Apps",
-      "description": "High-quality mobile applications for Android and iOS."
-    },
-    {
-      "id": 3,
-      "title": "SEO & Marketing",
-      "description": "Improve your online presence with our expert strategies."
-    }
-  ]
+  }
 }

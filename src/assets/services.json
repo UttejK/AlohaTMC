@@ -1,0 +1,106 @@
+[
+  {
+    "id": 0,
+    "title": "Mobile Development",
+    "icon": "Smartphone",
+    "description": "State-of-the-art native Android & iOS mobile application development.",
+    "headerImage": "/images/services/mobile-development.jpg",
+    "content": "We specialize in cutting-edge mobile app development for Android and iOS, leveraging native and cross-platform technologies to build seamless, scalable applications.",
+    "features": [
+      "Native & Cross-Platform Development",
+      "UI/UX Design & Prototyping",
+      "App Store Deployment & Support"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Cloud Infrastructure",
+    "icon": "Cloud",
+    "description": "Drive innovation and scalability with seamless cloud integration.",
+    "headerImage": "/images/services/cloud-infrastructure.jpg",
+    "content": "Our cloud solutions help businesses scale efficiently, ensuring robust security, high availability, and cost-effective infrastructure management.",
+    "features": [
+      "AWS, Azure & Google Cloud Services",
+      "Cloud Migration & Deployment",
+      "Security & Compliance Solutions"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Functional Testing",
+    "icon": "CheckSquare",
+    "description": "Ensuring application quality from requirement phase to final delivery.",
+    "headerImage": "/images/services/functional-testing.jpg",
+    "content": "We provide comprehensive functional testing services to guarantee software reliability and performance before deployment.",
+    "features": [
+      "Manual & Automated Testing",
+      "Regression & Smoke Testing",
+      "Bug Tracking & Reporting"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Mobile Automation",
+    "icon": "Settings2",
+    "description": "Automated testing for Android & iOS platforms to ensure excellence.",
+    "headerImage": "/images/services/mobile-automation.jpg",
+    "content": "We offer cutting-edge mobile automation solutions that streamline testing processes and improve software reliability.",
+    "features": [
+      "Automated UI Testing",
+      "Cross-Device Compatibility",
+      "CI/CD Pipeline Integration"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "REST API Testing",
+    "icon": "Code",
+    "description": "Expertise in building automation testing frameworks for REST APIs.",
+    "headerImage": "/images/services/rest-api-testing.jpg",
+    "content": "Our REST API testing ensures secure, scalable, and efficient communication between applications.",
+    "features": [
+      "API Automation Testing",
+      "Postman, SoapUI & JMeter Expertise",
+      "End-to-End API Validation"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Database Testing",
+    "icon": "Database",
+    "description": "Ensuring accuracy, integrity, and performance of database systems.",
+    "headerImage": "/images/services/database-testing.jpg",
+    "content": "We conduct extensive database testing to verify data consistency, security, and reliability.",
+    "features": [
+      "SQL Query Validation",
+      "Data Migration Testing",
+      "Performance & Load Testing"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Automation Frameworks",
+    "icon": "Cpu",
+    "description": "Development & integration of automation frameworks with CI/CD pipelines.",
+    "headerImage": "/images/services/automation-frameworks.jpg",
+    "content": "Our automation framework solutions improve efficiency, scalability, and continuous integration processes.",
+    "features": [
+      "Custom Framework Development",
+      "Integration with Jenkins & GitHub Actions",
+      "End-to-End Test Automation"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Performance & Load Testing",
+    "icon": "Gauge",
+    "description": "Ensuring optimal functionality and user experience through performance testing.",
+    "headerImage": "/images/services/performance-testing.jpg",
+    "content": "We provide in-depth performance testing to optimize application speed, scalability, and stability.",
+    "features": [
+      "Load & Stress Testing",
+      "JMeter & Gatling Expertise",
+      "Bottleneck Identification & Optimization"
+    ]
+  }
+]

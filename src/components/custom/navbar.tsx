@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import data from "@/assets/data.json";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
-import data from "@/assets/data.json";
+import { Menu, Moon, Sun, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Industries and Experience", href: "#industries" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Industries and Experience", href: "/industries" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -34,37 +34,29 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
-        <Link
+        <NavLink
           to="/"
           className="text-xl font-bold text-gray-900 dark:text-white"
         >
           {data.name_of_the_company}
-        </Link>
+        </NavLink>
 
         {/* Desktop Navigation & Dark Mode Toggle */}
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
-            // <Link
-            //   key={link.name}
-            //   to={link.href}
-            //   className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
-            // >
-            //   {link.name}
-            // </Link>
-            <a
+            <NavLink
               key={link.name}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                const section = document.querySelector(link.href);
-                if (section) {
-                  section.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              className="block text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
+              to={link.href}
+              className={({ isActive }) =>
+                cn(
+                  "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition relative",
+                  isActive &&
+                    "text-blue-500 dark:text-blue-400 font-semibold after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] after:bg-blue-500 dark:after:bg-blue-400 after:transition-all"
+                )
+              }
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
 
           {/* Dark Mode Toggle Button */}
@@ -115,29 +107,20 @@ export default function Navbar() {
         )}
       >
         {navLinks.map((link) => (
-          // <Link
-          //   key={link.name}
-          //   to={link.href}
-          //   className="block text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
-          //   onClick={() => setIsOpen(false)}
-          // >
-          //   {link.name}
-          // </Link>
-          <a
+          <NavLink
             key={link.name}
-            href={link.href}
-            onClick={(e) => {
-              e.preventDefault();
-              const section = document.querySelector(link.href);
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-                setIsOpen(false); // Close mobile menu
-              }
-            }}
-            className="block text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
+            to={link.href}
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              cn(
+                "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition relative",
+                isActive &&
+                  "text-blue-500 dark:text-blue-400 font-semibold after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] after:bg-blue-500 dark:after:bg-blue-400 after:transition-all"
+              )
+            }
           >
             {link.name}
-          </a>
+          </NavLink>
         ))}
       </div>
     </nav>

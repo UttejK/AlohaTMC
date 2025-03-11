@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 // import { Link } from "react-router-dom";
 import data from "@/assets/data.json";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -16,19 +17,7 @@ export default function Hero() {
         {data.description}
       </p>
       <Button className="mt-6">
-        {/* <Link to="/contact">Know More</Link> */}
-        <a
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            const section = document.querySelector("#contact");
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Know More
-        </a>
+        <Link to="/contact">Know More</Link>
       </Button>
     </section>
   );
