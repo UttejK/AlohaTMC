@@ -34,10 +34,12 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
-        <NavLink
-          to="/"
-          className="text-xl font-bold text-gray-900 dark:text-white"
-        >
+        <NavLink to="/" className="text-xl font-bold flex gap-2 items-center">
+          <img
+            src="/ATMC.jpg"
+            alt="ATMC Logo"
+            className="w-10 h-10 rounded-full"
+          />
           {data.name_of_the_company}
         </NavLink>
 
