@@ -1,10 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 
-const navLinks = [
+interface NavLink {
+  name: string;
+  path: string;
+}
+
+const navLinks: NavLink[] = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
@@ -12,56 +17,66 @@ const navLinks = [
   { name: "Careers", path: "/careers" },
 ];
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   const { pathname } = useLocation();
 
   return (
-    <header className="bg-background shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-primary">
+    <header className="bg-white dark:bg-black shadow-lg sticky top-0 z-50 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <Link
+          to="/"
+          className="text-3xl font-extrabold text-black dark:text-white tracking-tight"
+        >
           ATMC
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 items-center">
+        <nav className="hidden md:flex space-x-8 items-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               className={cn(
-                "text-muted-foreground hover:text-primary transition font-medium",
-                pathname === link.path && "text-primary underline"
+                "hover:scale-105 transform transition-all duration-300 font-semibold text-base",
+                "text-black hover:text-gray-700", // Light mode text
+                "dark:text-white dark:hover:text-gray-300", // Dark mode text
+                pathname === link.path &&
+                  "underline underline-offset-4 text-black dark:text-white"
               )}
             >
               {link.name}
             </Link>
           ))}
-          <div className="hidden md:flex items-center">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Nav */}
         <div className="md:hidden flex items-center space-x-4">
-          <div className="md:hidden flex items-center">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <button aria-label="Open menu">
-                <Menu className="w-6 h-6 text-primary" />
+              <button
+                aria-label="Open menu"
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300"
+              >
+                <Menu className="w-7 h-7 text-black dark:text-white" />
               </button>
             </SheetTrigger>
 
-            <SheetContent side="left">
-              <nav className="flex flex-col space-y-4 mt-8">
+            <SheetContent
+              side="left"
+              className="bg-white dark:bg-black text-black dark:text-white"
+            >
+              <nav className="flex flex-col space-y-6 mt-10">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     to={link.path}
                     className={cn(
-                      "text-foreground hover:text-primary text-lg font-medium",
-                      pathname === link.path && "text-primary"
+                      "text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300",
+                      "text-xl font-semibold transition-all duration-300",
+                      pathname === link.path &&
+                        "border-l-4 pl-2 border-black dark:border-white"
                     )}
                   >
                     {link.name}
@@ -74,4 +89,6 @@ export default function Navbar() {
       </div>
     </header>
   );
-}
+};
+
+export default Navbar;

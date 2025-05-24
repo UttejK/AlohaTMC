@@ -1,8 +1,9 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
+import Home from "./pages/Home";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   const router = createBrowserRouter([
@@ -12,6 +13,10 @@ function App() {
         {
           element: <Home />,
           path: "/",
+        },
+        {
+          element: <PageNotFound />,
+          path: "*",
         },
       ],
     },
