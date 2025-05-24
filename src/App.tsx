@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
+import About from "./pages/About";
 
 function App() {
   const router = createBrowserRouter([
@@ -12,7 +13,11 @@ function App() {
       children: [
         {
           element: <Home />,
-          path: "/",
+          index: true,
+        },
+        {
+          element: <About />,
+          path: "about",
         },
         {
           element: <PageNotFound />,
@@ -37,7 +42,7 @@ function Layout() {
   return (
     <div>
       <Navbar />
-      <div className="w-full bg-gray-100 dark:bg-gray-900">
+      <div className="w-full ">
         <Outlet />
       </div>
       <Footer />
