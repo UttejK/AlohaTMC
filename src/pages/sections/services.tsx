@@ -1,75 +1,43 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cloud, Computer, ServerCog, Users, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  Smartphone,
-  Cloud,
-  CheckSquare,
-  Settings2,
-  Database,
-  Code,
-  Cpu,
-  Gauge,
-} from "lucide-react";
 
 const services = [
   {
     id: 0,
-    title: "Mobile Development",
-    icon: <Smartphone className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    title: "Intelligent ERP",
+    icon: <ServerCog className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     description:
-      "State-of-the-art native Android & iOS mobile application development.",
+      "Our iERP solutions, on-premise and cloud-based, automate and optimize Finance, HR, logistics, CRM, sales, and procurement. Using AI, ML, and data analytics, we provide scalable solutions across industries. Our services include advisory, implementation, modernization, migration, and custom development to enhance automation.",
   },
   {
     id: 1,
-    title: "Cloud Infrastructure",
-    icon: <Cloud className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    title: "Enterprise Digital Transformation",
+    icon: <Users className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     description:
-      "Drive innovation and scalability with seamless cloud integration.",
+      "Our digital transformation services help enterprises design, automate, and modernize processes with intelligent tools. We offer tailored solutions in user and customer experience design, mobile and web technologies, AI/ML, modern generative AI, cloud computing, analytics, Industrial Internet of Things (IIoT), and hyper-automation.",
   },
   {
     id: 2,
-    title: "Functional Testing",
-    icon: (
-      <CheckSquare className="w-10 h-10 text-blue-600 dark:text-blue-400" />
-    ),
+    title: "Infrastructure Services",
+    icon: <Workflow className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     description:
-      "Ensuring application quality from requirement phase to final delivery.",
+      "Our infrastructure services help businesses assess, design, build, and maintain a robust, secure IT infrastructure to drive growth and enhance efficiency. We offer solutions in cloud engineering, cybersecurity, IT service management, network operations, and identity and access management to ensure resilience and cost-effectiveness. ",
   },
   {
     id: 3,
-    title: "Mobile Automation",
-    icon: <Settings2 className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    title: "Program Management",
+    icon: <Cloud className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     description:
-      "Automated testing for Android & iOS platforms to ensure excellence.",
+      "Our enterprise program management office (E-PMO) services are designed to boost project planning, governance, execution, and monitoring using advanced technology, tailored to diverse industries and customers. E-PMO empowers businesses to maximize project outcomes, reduce risks, and make informed, data-driven decisions in the evolving digital landscape.",
   },
   {
     id: 4,
-    title: "REST API Testing",
-    icon: <Code className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    title: "Managed Services",
+    icon: <Computer className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     description:
-      "Expertise in building automation testing frameworks for REST APIs.",
-  },
-  {
-    id: 5,
-    title: "Database Testing",
-    icon: <Database className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    description:
-      "Ensuring accuracy, integrity, and performance of database systems.",
-  },
-  {
-    id: 6,
-    title: "Automation Frameworks",
-    icon: <Cpu className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    description:
-      "Development & integration of automation frameworks with CI/CD pipelines.",
-  },
-  {
-    id: 7,
-    title: "Performance & Load Testing",
-    icon: <Gauge className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    description:
-      "Ensuring optimal functionality and user experience through performance testing.",
+      "Our managed services involve assessing existing systems, workflows, and operations. Our experts deliver maintenance and support, customize technology solutions, and offer cloud services tailored to your unique business needs. We focus on enhancing flexibility and scalability for optimal business efficiency.",
   },
 ];
 
@@ -87,7 +55,7 @@ export default function Services() {
         </p>
 
         {/* Services Grid */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {services.map((service) => (
             <Card
               key={service.title}
