@@ -1,8 +1,104 @@
 {
-  "name_of_the_company": "Aloha TMC",
-  "description": "ATMC specializes in technology innovation and digital solutions development. With technology consulting expertise and proven industry experience that is second to none, ATMC is always at the forefront of helping customers redefine their digital strategies and accelerate their business transformation journey.",
-  "about_us": {
-    "detailed": "At Aloha Technologies and Management Consulting LLC (ATMC), we empower enterprises across the globe to gain a competitive edge by optimizing their perations for maximum efficiency and cost-effectiveness.With over a decade of experience and state-of-the-art development centers in the USA and India, we have established ourselves as a leading provider of Information Technology Services. We are proud to have a team of exceptionally talented and experienced professionals dedicated to delivering world-class IT solutions. Our commitment is to offer innovative and cost-effective services that drive the success of our clients' groundbreaking innovations.",
-    "short": "At Aloha Technologies and Management Consulting LLC (ATMC), we help enterprises gain a competitive edge by optimizing operations for efficiency and cost-effectiveness. With over a decade of experience and development centers in the USA and India, we provide world-class IT services. Our talented team delivers innovative, cost-effective solutions to drive client success."
-  }
+  "services": [
+    {
+      "title": "Automation",
+      "description": "We enable enterprises to automate high-volume, repetitive tasks with intelligent digital workforce solutions, reducing cost and increasing efficiency.",
+      "link": "/services/automation",
+      "image": "/pexels-photo-3184465.jpeg"
+    },
+    {
+      "title": "Application Services",
+      "description": "We design, build, and manage modern applications that drive agility, innovation, and business performance.",
+      "link": "/services/application-services",
+      "image": "/pexels-photo-3861969.jpeg"
+    },
+    {
+      "title": "Business Process Services",
+      "description": "We streamline and manage business operations using domain expertise, technology, and analytics to deliver better outcomes.",
+      "link": "/services/business-process-services",
+      "image": "/pexels-photo-3184466.jpeg"
+    },
+    {
+      "title": "Consulting",
+      "description": "We help organizations define transformation strategies and implement change using technology, data, and innovation.",
+      "link": "/services/consulting",
+      "image": "/pexels-photo-3184292.jpeg"
+    },
+    {
+      "title": "Quality Engineering & Assurance",
+      "description": "We provide quality assurance across applications and platforms to help you deliver reliable and high-performance software.",
+      "link": "/services/quality-engineering",
+      "image": "/pexels-photo-3861972.jpeg"
+    },
+    {
+      "title": "Software Engineering",
+      "description": "Our teams engineer software that solves real-world problems and drives your business forward through innovation and performance.",
+      "link": "/services/software-engineering",
+      "image": "/pexels-photo-3861964.jpeg"
+    }
+  ],
+  "capabilities": [
+    {
+      "title": "Mobile Development",
+      "description": "We build seamless mobile applications tailored to your business needs on Android, iOS, and cross-platform frameworks.",
+      "link": "/capabilities/mobile-development",
+      "image": "/pexels-photo-1181244.jpeg"
+    },
+    {
+      "title": "Cloud Infrastructure",
+      "description": "Our cloud solutions enhance agility and scalability, helping you modernize your IT ecosystem securely and efficiently.",
+      "link": "/capabilities/cloud-infrastructure",
+      "image": "/pexels-photo-1181248.jpeg"
+    },
+    {
+      "title": "Functional Testing",
+      "description": "We ensure your software behaves as expected with thorough functional testing aligned with user stories and requirements.",
+      "link": "/capabilities/functional-testing",
+      "image": "/pexels-photo-3861973.jpeg"
+    },
+    {
+      "title": "REST API Testing",
+      "description": "We validate the performance and reliability of APIs through robust testing strategies and automation frameworks.",
+      "link": "/capabilities/api-testing",
+      "image": "/pexels-photo-3861971.jpeg"
+    },
+    {
+      "title": "Automation Frameworks",
+      "description": "Our reusable automation frameworks accelerate delivery cycles and ensure consistent quality in CI/CD pipelines.",
+      "link": "/capabilities/automation-frameworks",
+      "image": "/pexels-photo-3861974.jpeg"
+    },
+    {
+      "title": "Performance & Load Testing",
+      "description": "We simulate real-world load scenarios to ensure your application scales and performs reliably under stress.",
+      "link": "/capabilities/performance-testing",
+      "image": "/pexels-photo-3861970.jpeg"
+    }
+  ],
+  "industries": [
+    {
+      "title": "Healthcare",
+      "description": "We partner with healthcare providers and payers to improve care delivery through secure, compliant, and efficient digital solutions.",
+      "link": "/industries/healthcare",
+      "image": "/pexels-photo-3861968.jpeg"
+    },
+    {
+      "title": "Insurance",
+      "description": "We help insurers modernize operations, personalize customer experiences, and adopt data-driven decision making.",
+      "link": "/industries/insurance",
+      "image": "/pexels-photo-3861967.jpeg"
+    },
+    {
+      "title": "Life Sciences",
+      "description": "From clinical trials to supply chain digitization, we support life sciences organizations in transforming operations and outcomes.",
+      "link": "/industries/life-sciences",
+      "image": "/pexels-photo-3861966.jpeg"
+    },
+    {
+      "title": "Travel and Hospitality",
+      "description": "We enable travel brands to deliver seamless, personalized guest experiences through digital platforms and smart systems.",
+      "link": "/industries/travel-hospitality",
+      "image": "/pexels-photo-3861965.jpeg"
+    }
+  ]
 }
