@@ -20,96 +20,82 @@ export default function AboutUs() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Slide data
+  const slides = [
+    {
+      title: "About Us",
+      description:
+        "Aloha Technologies and Management Consulting LLC (ATMC) empowers enterprises by optimizing operations for efficiency and cost-effectiveness. With development centers in the USA and India, we provide world-class IT solutions.",
+      image:
+        "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    },
+    {
+      title: "Our Mission",
+      description:
+        "To help businesses transform and thrive in a rapidly evolving technological landscape by providing innovative, reliable, and scalable IT solutions.",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    },
+    {
+      title: "Our Core Values",
+      description: (
+        <ul className="list-disc list-inside space-y-1">
+          <li>Integrity</li>
+          <li>Competence</li>
+          <li>Client Commitment</li>
+          <li>Dedication</li>
+          <li>Value Addition</li>
+        </ul>
+      ),
+      image:
+        "https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg",
+    },
+    {
+      title: "Our Experience",
+      description:
+        "With 3+ years of service and 20+ years of cumulative experience, we specialize in IT consulting and digital solutions across industries.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
+    },
+  ];
+
   return (
     <section id="about" className="py-16 px-4 flex justify-center items-center">
-      <div className="max-w-3xl w-full">
+      <div className="w-full">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           pagination={{ clickable: true }}
           navigation={enableNavigation}
           autoplay={{ delay: 5000 }}
           loop={true}
-          className="rounded-lg shadow-lg"
-          style={{ height: "350px" }}
+          className="rounded-lg overflow-hidden"
+          style={{ height: "480px" }}
         >
-          {/* Slide 1 - About Us */}
-          <SwiperSlide className="bg-white dark:bg-gray-800 p-8 text-center h-full flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              About Us
-            </h2>
-            <p className="mt-4 text-gray-700 dark:text-gray-300">
-              Aloha Technologies and Management Consulting LLC (ATMC) empowers
-              enterprises by optimizing operations for efficiency and
-              cost-effectiveness. With development centers in the USA and India,
-              we provide world-class IT solutions.
-            </p>
-            <Button
-              className="mt-4 mx-auto"
-              variant="outline"
-              onClick={() => navigate("/about")}
-            >
-              Read More
-            </Button>
-          </SwiperSlide>
-
-          {/* Slide 2 - Mission */}
-          <SwiperSlide className="bg-white dark:bg-gray-800 p-8 text-center h-full flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Our Mission
-            </h2>
-            <p className="mt-4 text-gray-700 dark:text-gray-300">
-              To help businesses transform and thrive in a rapidly evolving
-              technological landscape by providing innovative, reliable, and
-              scalable IT solutions.
-            </p>
-            <Button
-              className="mt-4 mx-auto"
-              variant="outline"
-              onClick={() => navigate("/about")}
-            >
-              Read More
-            </Button>
-          </SwiperSlide>
-
-          {/* Slide 3 - Core Values */}
-          <SwiperSlide className="bg-white dark:bg-gray-800 p-8 text-center h-full flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Our Core Values
-            </h2>
-            <ul className="mt-4 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>✔ Integrity</li>
-              <li>✔ Competence</li>
-              <li>✔ Client Commitment</li>
-              <li>✔ Dedication</li>
-              <li>✔ Value Addition</li>
-            </ul>
-            <Button
-              className="mt-4 mx-auto"
-              variant="outline"
-              onClick={() => navigate("/about")}
-            >
-              Read More
-            </Button>
-          </SwiperSlide>
-
-          {/* Slide 4 - Experience */}
-          <SwiperSlide className="bg-white dark:bg-gray-800 p-8 text-center h-full flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Our Experience
-            </h2>
-            <p className="mt-4 text-gray-700 dark:text-gray-300">
-              With 3+ years of service and 20+ years of cumulative experience,
-              we specialize in IT consulting and digital solutions across
-              industries.
-            </p>
-            <Button
-              className="mt-4 mx-auto"
-              variant="outline"
-              onClick={() => navigate("/about")}
-            >
-              Read More
-            </Button>
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="relative w-full h-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${slide.image})`,
+                }}
+              >
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center items-center text-white p-6 md:p-12 text-center">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    {slide.title}
+                  </h2>
+                  <div className="text-md md:text-lg max-w-2xl">
+                    {slide.description}
+                  </div>
+                  <Button
+                    className="mt-6"
+                    variant="secondary"
+                    onClick={() => navigate("/about")}
+                  >
+                    Read More
+                  </Button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>
