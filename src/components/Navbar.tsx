@@ -73,10 +73,10 @@ const Navbar: React.FC = () => {
                     key={link.name}
                     to={link.path}
                     className={cn(
-                      "text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300",
+                      "text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 pl-8",
                       "text-xl font-semibold transition-all duration-300",
                       pathname === link.path &&
-                        "border-l-4 pl-2 border-black dark:border-white"
+                        "border-l-4 pl-8 border-black dark:border-white"
                     )}
                   >
                     {link.name}
