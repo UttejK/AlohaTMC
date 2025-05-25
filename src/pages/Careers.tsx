@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { toast } from "sonner"; // shadcn's toast hook import
+import { sendEmail } from "@/lib/utils";
 
 export default function Careers() {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ export default function Careers() {
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const validationErrors = validate();
@@ -74,9 +75,23 @@ export default function Careers() {
       return;
     }
 
-    // Simulate submission failure because email service is not configured
     try {
-      throw new Error("Email service not configured.");
+      if (formData.resume) {
+        const messageBody = {
+          name: formData.fullName,
+          email: formData.email,
+          subject: `Career Application, from ${formData.fullName}, phone: ${formData.phone}`,
+          message: formData.coverLetter,
+          files: [formData.resume],
+        };
+        if (formData.coverLetterFile) {
+          messageBody.files.push(formData.coverLetterFile);
+        }
+
+        await sendEmail(messageBody);
+      } else {
+        toast.error("A resume is required to submit the application.");
+      }
     } catch (err) {
       console.error(err);
       toast.error("Submission Failed", {

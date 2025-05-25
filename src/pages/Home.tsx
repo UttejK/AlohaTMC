@@ -30,7 +30,9 @@ export default function Home() {
               USA and India.
             </p>
             <Link to="/about">
-              <Button>Who We Are</Button>
+              <Button className="bg-white text-black font-bold">
+                Who We Are
+              </Button>
             </Link>
           </div>
         </div>
@@ -162,9 +164,7 @@ export const HomeCard = ({
           <p className="text-sm text-gray-100 mb-4">{description}</p>
           <div className="flex justify-end">
             <Link to={link}>
-              <Button variant="secondary" className="text-sm">
-                Know more →
-              </Button>
+              <Button className="text-sm">Know more →</Button>
             </Link>
           </div>
         </div>

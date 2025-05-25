@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { sendEmail } from "@/lib/utils";
 
 type ContactFormData = {
   name: string;
@@ -45,7 +46,7 @@ export default function Contact() {
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
 
@@ -67,6 +68,13 @@ export default function Contact() {
     }
 
     // Simulate success
+    await sendEmail({
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    });
+
     toast.success("Message sent successfully!");
     setFormData({ name: "", email: "", subject: "", message: "" });
     setErrors({});

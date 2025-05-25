@@ -24,11 +24,21 @@ const Navbar: React.FC = () => {
   return (
     <header className="bg-white dark:bg-black shadow-lg sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        <Link
+        {/* <Link
           to="/"
           className="text-3xl font-extrabold text-black dark:text-white tracking-tight"
         >
           ATMC
+        </Link> */}
+        <Link to="/" className="flex items-center space-x-4">
+          <img
+            src="/ATMC.jpg"
+            alt="ATMC Logo"
+            className="size-10 scale-[1.5] rounded-full object-fit"
+          />
+          <span className="text-3xl font-extrabold text-black dark:text-white tracking-tight">
+            ATMC
+          </span>
         </Link>
 
         {/* Desktop Nav */}
