@@ -3,38 +3,157 @@
     {
       "title": "Automation",
       "description": "We enable enterprises to automate high-volume, repetitive tasks with intelligent digital workforce solutions, reducing cost and increasing efficiency.",
+      "detailed_description": "Our Automation services leverage RPA, AI, and ML to streamline operations. We help businesses enhance productivity, eliminate manual errors, and reduce operational costs through intelligent automation platforms.",
+      "offerings": [
+        "Robotic Process Automation (RPA)",
+        "AI-powered Decision Making",
+        "Workflow Orchestration",
+        "Automation Consulting"
+      ],
+      "benefits": [
+        "Increased operational efficiency",
+        "Reduced manual errors",
+        "Cost savings through task automation",
+        "Enhanced scalability of business processes"
+      ],
+      "technologies": [
+        "UiPath",
+        "Automation Anywhere",
+        "Blue Prism",
+        "TensorFlow"
+      ],
+      "case_study": {
+        "title": "Streamlining Invoice Processing",
+        "summary": "Implemented RPA to automate invoice processing, reducing processing time by 70% and minimizing errors."
+      },
       "link": "/services/automation",
-      "image": "/compressed/pexels-photo-3184465.webp"
+      "image": "/compressed/pexels-photo-3184465.webp",
+      "cta_label": "Talk to our automation experts"
     },
     {
       "title": "Application Services",
       "description": "We design, build, and manage modern applications that drive agility, innovation, and business performance.",
+      "detailed_description": "From cloud-native development to legacy modernization, we help you create secure, scalable, and user-friendly applications tailored to your business needs.",
+      "offerings": [
+        "Custom App Development",
+        "Legacy System Modernization",
+        "Cloud-native Architectures",
+        "DevOps & CI/CD Enablement"
+      ],
+      "benefits": [
+        "Accelerated time-to-market",
+        "Improved user experience",
+        "Enhanced application scalability",
+        "Reduced maintenance costs"
+      ],
+      "technologies": ["React", "Node.js", "Docker", "Kubernetes"],
+      "case_study": {
+        "title": "Modernizing E-commerce Platform",
+        "summary": "Transformed a legacy e-commerce system into a cloud-native application, resulting in a 50% increase in user engagement."
+      },
       "link": "/services/application-services",
-      "image": "/compressed/pexels-photo-3861969.webp"
+      "image": "/compressed/pexels-photo-3861969.webp",
+      "cta_label": "Explore your app needs with us"
     },
     {
       "title": "Business Process Services",
       "description": "We streamline and manage business operations using domain expertise, technology, and analytics to deliver better outcomes.",
+      "detailed_description": "Our business process services use intelligent automation, analytics, and industry knowledge to optimize workflows and improve customer satisfaction.",
+      "offerings": [
+        "Finance & Accounting BPO",
+        "Customer Experience Services",
+        "HR and Payroll Automation",
+        "Data Processing & Compliance"
+      ],
+      "benefits": [
+        "Enhanced process efficiency",
+        "Improved compliance and risk management",
+        "Cost-effective operations",
+        "Better customer satisfaction"
+      ],
+      "technologies": ["SAP", "Oracle", "Workday", "Salesforce"],
+      "case_study": {
+        "title": "Optimizing Payroll Processing",
+        "summary": "Automated payroll processing for a multinational company, reducing errors by 90% and processing time by 60%."
+      },
       "link": "/services/business-process-services",
-      "image": "/compressed/pexels-photo-3184466.webp"
+      "image": "/compressed/pexels-photo-3184466.webp",
+      "cta_label": "Optimize your processes today"
     },
     {
       "title": "Consulting",
       "description": "We help organizations define transformation strategies and implement change using technology, data, and innovation.",
+      "detailed_description": "Our consultants work alongside you to create and implement digital transformation strategies backed by deep industry expertise, data science, and technology innovation.",
+      "offerings": [
+        "Digital Transformation Strategy",
+        "IT and Cloud Advisory",
+        "Data & AI Strategy",
+        "Change Management"
+      ],
+      "benefits": [
+        "Strategic alignment of IT and business goals",
+        "Informed decision-making through data insights",
+        "Effective change management",
+        "Enhanced competitive advantage"
+      ],
+      "technologies": ["AWS", "Azure", "Google Cloud Platform", "Power BI"],
+      "case_study": {
+        "title": "Driving Digital Transformation",
+        "summary": "Developed a comprehensive digital transformation roadmap for a healthcare provider, leading to improved patient engagement and operational efficiency."
+      },
       "link": "/services/consulting",
-      "image": "/compressed/pexels-photo-3184292.webp"
+      "image": "/compressed/pexels-photo-3184292.webp",
+      "cta_label": "Schedule a consultation"
     },
     {
       "title": "Quality Engineering & Assurance",
       "description": "We provide quality assurance across applications and platforms to help you deliver reliable and high-performance software.",
+      "detailed_description": "Ensure product quality with our test automation, performance testing, and QA strategy services. We bring reliability and confidence to your software delivery lifecycle.",
+      "offerings": [
+        "Test Automation",
+        "Performance Testing",
+        "Quality Strategy Consulting",
+        "Continuous Testing for DevOps"
+      ],
+      "benefits": [
+        "Improved software reliability",
+        "Faster release cycles",
+        "Reduced post-release defects",
+        "Enhanced user satisfaction"
+      ],
+      "technologies": ["Selenium", "JMeter", "TestNG", "Appium"],
+      "case_study": {
+        "title": "Enhancing Application Quality",
+        "summary": "Implemented automated testing for a banking application, reducing critical bugs by 85% and accelerating release cycles."
+      },
       "link": "/services/quality-engineering",
-      "image": "/compressed/pexels-photo-3861972.webp"
+      "image": "/compressed/pexels-photo-3861972.webp",
+      "cta_label": "Get your QA right"
     },
     {
       "title": "Software Engineering",
       "description": "Our teams engineer software that solves real-world problems and drives your business forward through innovation and performance.",
+      "detailed_description": "We deliver innovative software tailored to complex business challenges using agile methodologies, clean code principles, and future-proof architectures.",
+      "offerings": [
+        "Enterprise Software Development",
+        "Mobile & Web App Engineering",
+        "Product Development Teams",
+        "Agile & DevOps Integration"
+      ],
+      "benefits": [
+        "Custom solutions aligned with business needs",
+        "Scalable and maintainable codebases",
+        "Accelerated development cycles",
+        "Improved collaboration through agile practices"
+      ],
+      "technologies": ["Java", "Python", "Angular", "Spring Boot"],
+      "case_study": {
+        "title": "Developing a Scalable CRM System",
+        "summary": "Built a custom CRM platform for a sales organization, resulting in a 40% increase in lead conversion rates."
+      },
       "link": "/services/software-engineering",
-      "image": "/compressed/pexels-photo-3861964.webp"
+      "image": "/compressed/pexels-photo-3861964.webp",
+      "cta_label": "Let's build your solution"
     }
   ],
   "capabilities": [

@@ -1,51 +1,38 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
+
 import Home from "./pages/Home";
-import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import PageNotFound from "./pages/PageNotFound";
+import Careers from "./pages/Careers";
+import { Toaster } from "./components/ui/sonner";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      element: <Layout />,
-      children: [
-        {
-          element: <Home />,
-          index: true,
-        },
-        {
-          element: <About />,
-          path: "about",
-        },
-        {
-          element: <PageNotFound />,
-          path: "*",
-        },
-      ],
-    },
-  ]);
-
   return (
-    <div>
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="" element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="services" element={<Services />} />
+              <Route path="services/:slug" element={<ServiceDetail />} />
+              <Route path="careers" element={<Careers />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+            <Toaster />
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
 export default App;
-
-function Layout() {
-  return (
-    <div>
-      <Navbar />
-      <div className="w-full ">
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
-  );
-}
