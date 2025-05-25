@@ -92,7 +92,7 @@ export default function About() {
                 </p>
                 <Link to={capability.link}>
                   <Button className="text-sm hover:underline font-medium">
-                    Learn more →
+                    Know more →
                   </Button>
                 </Link>
               </div>

@@ -39,7 +39,7 @@ export default function Industries() {
             <CardFooter>
               <Link to={link}>
                 <Button className="font-semibold hover:underline">
-                  Learn More →
+                  Know more →
                 </Button>
               </Link>
             </CardFooter>

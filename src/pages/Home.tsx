@@ -163,7 +163,7 @@ export const HomeCard = ({
           <div className="flex justify-end">
             <Link to={link}>
               <Button variant="secondary" className="text-sm">
-                Learn More →
+                Know more →
               </Button>
             </Link>
           </div>

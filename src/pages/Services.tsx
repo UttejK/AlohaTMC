@@ -25,7 +25,7 @@ export default function Services() {
               </p>
               <span className="inline-block mt-4 text-primary font-medium group-hover:underline">
                 <Link to={service.link} className="group">
-                  <Button>Learn More →</Button>
+                  <Button>Know more →</Button>
                 </Link>
               </span>
             </div>
