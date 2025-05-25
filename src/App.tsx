@@ -1,19 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { ThemeProvider } from "./context/ThemeContext";
-
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import ServiceDetail from "./pages/ServiceDetail";
-import PageNotFound from "./pages/PageNotFound";
-import Careers from "./pages/Careers";
 import { Toaster } from "./components/ui/sonner";
+import { ThemeProvider } from "./context/ThemeContext";
+import About from "./pages/About";
+import CapabilityDetail from "./pages/CapabilityDetail";
+import Careers from "./pages/Careers";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 import Industries from "./pages/Industries";
 import IndustryDetail from "./pages/IndustryDetail";
-import Contact from "./pages/Contact";
-import CapabilityDetail from "./pages/CapabilityDetail";
+import PageNotFound from "./pages/PageNotFound";
+import ServiceDetail from "./pages/ServiceDetail";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -31,7 +30,6 @@ function App() {
               <Route path="industries/:slug" element={<IndustryDetail />} />
               <Route path="capabilities/:slug" element={<CapabilityDetail />} />
               <Route path="contact" element={<Contact />} />
-
               <Route path="careers" element={<Careers />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
