@@ -10,6 +10,9 @@ import ServiceDetail from "./pages/ServiceDetail";
 import PageNotFound from "./pages/PageNotFound";
 import Careers from "./pages/Careers";
 import { Toaster } from "./components/ui/sonner";
+import Industries from "./pages/Industries";
+import IndustryDetail from "./pages/IndustryDetail";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -23,10 +26,14 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="services" element={<Services />} />
               <Route path="services/:slug" element={<ServiceDetail />} />
+              <Route path="industries" element={<Industries />} />
+              <Route path="industries/:slug" element={<IndustryDetail />} />
+              <Route path="contact" element={<Contact />} />
+
               <Route path="careers" element={<Careers />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
-            <Toaster />
+            <Toaster richColors />
           </main>
           <Footer />
         </div>

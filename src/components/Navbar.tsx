@@ -15,6 +15,7 @@ const navLinks: NavLink[] = [
   { name: "Services", path: "/services" },
   { name: "Industries", path: "/industries" },
   { name: "Careers", path: "/careers" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Navbar: React.FC = () => {

@@ -197,25 +197,93 @@
   "industries": [
     {
       "title": "Healthcare",
+      "slug": "healthcare",
       "description": "We partner with healthcare providers and payers to improve care delivery through secure, compliant, and efficient digital solutions.",
+      "detailed_description": "Our healthcare solutions are designed to meet the evolving demands of care providers and payers. We focus on patient engagement, interoperability, compliance (HIPAA), and leveraging AI and analytics to enhance patient outcomes and operational efficiency.",
+      "highlights": [
+        "HIPAA-compliant digital platforms",
+        "Telehealth and remote care solutions",
+        "EMR/EHR modernization and integration"
+      ],
+      "technologies": [
+        "FHIR & HL7",
+        "AI diagnostics tools",
+        "Cloud-native architecture"
+      ],
+      "case_study": {
+        "title": "Digitizing Patient Onboarding",
+        "summary": "Helped a regional hospital system digitize patient onboarding, reducing wait times by 45% and improving patient satisfaction."
+      },
+      "cta_label": "Partner with Us in Healthcare",
       "link": "/industries/healthcare",
       "image": "/compressed/pexels-photo-3861968.webp"
     },
     {
       "title": "Insurance",
+      "slug": "insurance",
       "description": "We help insurers modernize operations, personalize customer experiences, and adopt data-driven decision making.",
+      "detailed_description": "Our insurance solutions empower carriers and agencies to streamline policy administration, enable self-service, and leverage predictive analytics to reduce risk and enhance underwriting precision.",
+      "highlights": [
+        "Claims process automation",
+        "Customer 360° view implementation",
+        "AI-powered risk assessments"
+      ],
+      "technologies": [
+        "InsurTech platforms",
+        "RPA (Robotic Process Automation)",
+        "Big Data and Predictive Analytics"
+      ],
+      "case_study": {
+        "title": "AI in Claims Processing",
+        "summary": "Reduced claim settlement time by 60% using machine learning algorithms for a mid-sized insurance provider."
+      },
+      "cta_label": "Transform Insurance with Us",
       "link": "/industries/insurance",
       "image": "/compressed/pexels-photo-3861967.webp"
     },
     {
       "title": "Life Sciences",
+      "slug": "life-sciences",
       "description": "From clinical trials to supply chain digitization, we support life sciences organizations in transforming operations and outcomes.",
+      "detailed_description": "We work with pharmaceutical and biotech companies to digitize lab processes, enhance regulatory compliance, and improve collaboration across the research-to-commercialization lifecycle.",
+      "highlights": [
+        "Digital lab management systems",
+        "Clinical trial data integration",
+        "Automated regulatory reporting"
+      ],
+      "technologies": [
+        "IoT lab sensors",
+        "Blockchain for clinical trials",
+        "AI-driven compound analysis"
+      ],
+      "case_study": {
+        "title": "Accelerating Clinical Trials",
+        "summary": "Enabled real-time data sharing and compliance automation for a global pharma firm, reducing trial timelines by 30%."
+      },
+      "cta_label": "Advance Life Sciences with Us",
       "link": "/industries/life-sciences",
       "image": "/compressed/pexels-photo-3861966.webp"
     },
     {
       "title": "Travel and Hospitality",
+      "slug": "travel-hospitality",
       "description": "We enable travel brands to deliver seamless, personalized guest experiences through digital platforms and smart systems.",
+      "detailed_description": "Our solutions help travel and hospitality brands personalize experiences, streamline bookings, and optimize operations through data and automation. From hotel systems to airline platforms, we deliver frictionless journeys.",
+      "highlights": [
+        "Mobile-first guest experiences",
+        "Dynamic booking and pricing engines",
+        "Loyalty program management"
+      ],
+      "technologies": [
+        "AI chatbots",
+        "IoT for smart rooms",
+        "Real-time analytics dashboards"
+      ],
+      "case_study": {
+        "title": "Smarter Hotel Stays",
+        "summary": "Deployed a contactless check-in and smart room control platform for a hotel chain, improving NPS by 40%."
+      },
+      "cta_label": "Digitize Hospitality with Us",
       "link": "/industries/travel-hospitality",
       "image": "/compressed/pexels-photo-3861965.webp"
     }

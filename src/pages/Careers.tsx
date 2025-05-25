@@ -62,8 +62,14 @@ export default function Careers() {
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      toast("Validation Error", {
-        description: "Please fix the errors before submitting.",
+      toast.error("Please fix the below errors before submitting:", {
+        description: (
+          <ul className="list-disc list-inside space-y-1 text-sm">
+            {Object.keys(validationErrors).map((key) => (
+              <li key={key}>{validationErrors[key]}</li>
+            ))}
+          </ul>
+        ),
       });
       return;
     }
@@ -73,8 +79,10 @@ export default function Careers() {
       throw new Error("Email service not configured.");
     } catch (err) {
       console.error(err);
-      toast("Submission Failed", {
-        description: "Sorry, we couldn't submit your application at this time.",
+      toast.error("Submission Failed", {
+        description: (
+          <div>Sorry, we couldn't submit your application at this time.</div>
+        ),
       });
     }
   };
@@ -95,13 +103,13 @@ export default function Careers() {
           className="mx-auto mt-6 rounded-2xl shadow-lg w-full max-h-96 object-cover"
         />
       </div>
-
       <form
         onSubmit={handleSubmit}
         className="space-y-6 bg-muted p-6 rounded-2xl shadow"
         noValidate
       >
         <div className="grid md:grid-cols-2 gap-6">
+          {/* Full Name */}
           <div>
             <Label htmlFor="fullName" className="mb-1 block">
               Full Name
@@ -109,6 +117,7 @@ export default function Careers() {
             <Input
               id="fullName"
               name="fullName"
+              className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-900"
               required
               value={formData.fullName}
               onChange={handleChange}
@@ -121,6 +130,8 @@ export default function Careers() {
               </p>
             )}
           </div>
+
+          {/* Email */}
           <div>
             <Label htmlFor="email" className="mb-1 block">
               Email
@@ -129,6 +140,7 @@ export default function Careers() {
               id="email"
               name="email"
               type="email"
+              className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-900"
               required
               value={formData.email}
               onChange={handleChange}
@@ -141,6 +153,8 @@ export default function Careers() {
               </p>
             )}
           </div>
+
+          {/* Phone */}
           <div>
             <Label htmlFor="phone" className="mb-1 block">
               Phone
@@ -150,6 +164,7 @@ export default function Careers() {
               name="phone"
               type="tel"
               required
+              className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-900"
               value={formData.phone}
               onChange={handleChange}
               aria-invalid={errors.phone ? "true" : "false"}
@@ -163,40 +178,44 @@ export default function Careers() {
           </div>
         </div>
 
+        {/* Resume Upload */}
         <div>
-          <Label htmlFor="coverLetter" className="mb-1 block">
-            Cover Letter (optional)
+          <Label htmlFor="resume" className="mb-1 block">
+            Upload Resume (PDF, DOC)
           </Label>
-          <Textarea
-            id="coverLetter"
-            name="coverLetter"
-            rows={5}
-            placeholder="Write your message..."
-            value={formData.coverLetter}
-            onChange={handleChange}
+          <Input
+            id="resume"
+            name="resume"
+            type="file"
+            accept=".pdf,.doc,.docx"
+            className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-900"
+            required
+            onChange={handleFileChange}
+            aria-invalid={errors.resume ? "true" : "false"}
+            aria-describedby="resume-error"
           />
+          {errors.resume && (
+            <p className="text-destructive mt-1 text-sm" id="resume-error">
+              {errors.resume}
+            </p>
+          )}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* Cover Letter Section (textarea + file upload) */}
+        <div className="space-y-6">
           <div>
-            <Label htmlFor="resume" className="mb-1 block">
-              Upload Resume (PDF, DOC)
+            <Label htmlFor="coverLetter" className="mb-1 block">
+              Cover Letter (optional)
             </Label>
-            <Input
-              id="resume"
-              name="resume"
-              type="file"
-              accept=".pdf,.doc,.docx"
-              required
-              onChange={handleFileChange}
-              aria-invalid={errors.resume ? "true" : "false"}
-              aria-describedby="resume-error"
+            <Textarea
+              id="coverLetter"
+              name="coverLetter"
+              rows={5}
+              placeholder="Write your message..."
+              className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-900"
+              value={formData.coverLetter}
+              onChange={handleChange}
             />
-            {errors.resume && (
-              <p className="text-destructive mt-1 text-sm" id="resume-error">
-                {errors.resume}
-              </p>
-            )}
           </div>
           <div>
             <Label htmlFor="coverLetterFile" className="mb-1 block">
@@ -208,6 +227,7 @@ export default function Careers() {
               type="file"
               accept=".pdf,.doc,.docx"
               onChange={handleFileChange}
+              className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-gray-900"
             />
           </div>
         </div>
