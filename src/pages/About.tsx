@@ -1,4 +1,10 @@
+import data from "@/assets/data.json";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 export default function About() {
+  const capabilities = data.capabilities;
+
   return (
     <main className="max-w-7xl mx-auto px-6 py-16 space-y-12">
       <section className="text-center max-w-3xl mx-auto">
@@ -61,6 +67,38 @@ export default function About() {
           approach and commitment to quality ensure we deliver transformative
           solutions that meet unique business needs.
         </p>
+      </section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-6 text-center">
+          Our Capabilities
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {capabilities.map((capability) => (
+            <div
+              key={capability.title}
+              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            >
+              <img
+                src={capability.image}
+                alt={capability.title}
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-4 space-y-2">
+                <h3 className="text-lg font-semibold text-primary">
+                  {capability.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {capability.description}
+                </p>
+                <Link to={capability.link}>
+                  <Button className="text-sm hover:underline font-medium">
+                    Learn more →
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );

@@ -1,70 +1,90 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import data from "@/assets/data.json";
 
 export default function IndustryDetail() {
-  const { slug } = useParams();
+  const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+
   const industry = data.industries.find((i) => i.slug === slug);
 
   if (!industry) {
     return (
-      <div className="p-6 text-center text-red-500">Industry not found</div>
+      <div className="max-w-4xl mx-auto p-8 text-center">
+        <h2 className="text-2xl font-semibold mb-4">Industry Not Found</h2>
+        <p className="mb-6">
+          Sorry, we couldn't find the industry you're looking for.
+        </p>
+        <button
+          onClick={() => navigate(-1)}
+          className="text-primary underline hover:text-primary-dark"
+        >
+          Go Back
+        </button>
+      </div>
     );
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4 text-primary">{industry.title}</h1>
+    <main className="max-w-5xl mx-auto px-6 py-12 space-y-8">
+      <section className="flex flex-col md:flex-row gap-8">
+        <img
+          src={industry.image}
+          alt={industry.title}
+          className="w-full md:w-1/3 rounded-lg object-cover shadow-md"
+          loading="lazy"
+        />
 
-      <img
-        src={industry.image}
-        alt={industry.title}
-        className="w-full h-64 object-cover rounded-2xl shadow mb-6"
-      />
+        <div className="md:flex-1 space-y-4">
+          <h1 className="text-4xl font-bold">{industry.title}</h1>
+          <p className="text-lg text-muted-foreground">
+            {industry.description}
+          </p>
+          <p>{industry.detailed_description}</p>
 
-      <p className="text-lg text-muted-foreground mb-6">
-        {industry.detailed_description}
-      </p>
+          {industry.highlights?.length > 0 && (
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Highlights</h3>
+              <ul className="list-disc list-inside space-y-1">
+                {industry.highlights.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-      {industry.highlights?.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">Industry Highlights</h2>
-          <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-            {industry.highlights.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
+          {industry.technologies?.length > 0 && (
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Technologies</h3>
+              <ul className="flex flex-wrap gap-3">
+                {industry.technologies.map((tech, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {industry.case_study && (
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Case Study</h3>
+              <h4 className="font-semibold">{industry.case_study.title}</h4>
+              <p>{industry.case_study.summary}</p>
+            </div>
+          )}
+
+          <Link
+            to="/contact"
+            className="inline-block mt-6 bg-primary py-3 px-6 rounded-lg font-semibold transition"
+          >
+            <Button>{industry.cta_label}</Button>
+          </Link>
         </div>
-      )}
-
-      {industry.technologies?.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">Technologies Used</h2>
-          <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-            {industry.technologies.map((tech, idx) => (
-              <li key={idx}>{tech}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {industry.case_study && (
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">Case Study</h2>
-          <div className="bg-muted p-4 rounded-xl shadow">
-            <h3 className="text-lg font-medium mb-1">
-              {industry.case_study.title}
-            </h3>
-            <p className="text-muted-foreground">
-              {industry.case_study.summary}
-            </p>
-          </div>
-        </div>
-      )}
-
-      <Button asChild className="text-lg px-6 py-3 rounded-xl">
-        <Link to="/contact">{industry.cta_label}</Link>
-      </Button>
-    </div>
+      </section>
+    </main>
   );
 }

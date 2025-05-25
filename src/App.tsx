@@ -13,6 +13,7 @@ import { Toaster } from "./components/ui/sonner";
 import Industries from "./pages/Industries";
 import IndustryDetail from "./pages/IndustryDetail";
 import Contact from "./pages/Contact";
+import CapabilityDetail from "./pages/CapabilityDetail";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="services/:slug" element={<ServiceDetail />} />
               <Route path="industries" element={<Industries />} />
               <Route path="industries/:slug" element={<IndustryDetail />} />
+              <Route path="capabilities/:slug" element={<CapabilityDetail />} />
               <Route path="contact" element={<Contact />} />
 
               <Route path="careers" element={<Careers />} />
