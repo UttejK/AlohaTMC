@@ -19,28 +19,31 @@ export default function Industries() {
       </h1>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {industries.map(({ title, description, link, image }) => (
-          <Link key={title} to={link} className="group">
-            <Card className="h-full flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={image}
-                  alt={title}
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{title}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-muted-foreground flex-grow">
-                {description}
-              </CardContent>
-              <CardFooter>
+          <Card
+            key={title}
+            className="group h-full flex flex-col overflow-hidden hover:shadow-xl transition duration-300 hover:scale-[1.02]"
+          >
+            <div className="h-48 overflow-hidden">
+              <img
+                src={image}
+                alt={title}
+                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <CardHeader>
+              <CardTitle className="text-xl">{title}</CardTitle>
+            </CardHeader>
+            <CardContent className="text-muted-foreground flex-grow">
+              {description}
+            </CardContent>
+            <CardFooter>
+              <Link to={link}>
                 <Button className="font-semibold hover:underline">
                   Learn More →
                 </Button>
-              </CardFooter>
-            </Card>
-          </Link>
+              </Link>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </div>

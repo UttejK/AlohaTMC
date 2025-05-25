@@ -76,7 +76,7 @@ export default function About() {
           {capabilities.map((capability) => (
             <div
               key={capability.title}
-              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-transform hover:scale-[1.02]"
             >
               <img
                 src={capability.image}
