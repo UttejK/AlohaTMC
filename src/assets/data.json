@@ -158,53 +158,6 @@
   ],
   "capabilities": [
     {
-      "title": "ADA Compliance & Accessibility Testing",
-      "slug": "accessibility-testing",
-      "description": "Ensure your digital platforms are inclusive and legally compliant with WCAG 2.1 and Section 508 standards.",
-      "detailed_description": "At Aloha Technologies and Management Consulting LLC, we are committed to building inclusive digital experiences. Our ADA compliance and accessibility testing services ensure that state applications and websites are accessible to users of all abilities. We conduct thorough evaluations using both automated and manual tools to identify and eliminate accessibility barriers, helping organizations meet compliance and enhance usability.",
-      "highlights": [
-        "Keyboard navigation and screen reader compatibility",
-        "Color contrast and text readability",
-        "Alt text validation and semantic HTML structure",
-        "Form labels, error messages, and focus indicators",
-        "Mobile accessibility and responsive layout testing"
-      ],
-      "technologies": [
-        "Axe",
-        "WAVE",
-        "NVDA",
-        "VoiceOver",
-        "Lighthouse",
-        "Manual Auditing"
-      ],
-      "case_study": {
-        "title": "Accessibility Audit for State Services Portal",
-        "summary": "Performed a full accessibility evaluation of a public services website, ensuring WCAG 2.1 AA compliance and significantly improving screen reader navigation and keyboard usability."
-      },
-      "cta_label": "Make Your Platform Inclusive",
-      "link": "/capabilities/accessibility-testing",
-      "image": "/compressed/pexels-pavel-danilyuk-7055876.webp"
-    },
-    {
-      "title": "Mobile Development",
-      "slug": "mobile-development",
-      "description": "We build seamless mobile applications tailored to your business needs on Android, iOS, and cross-platform frameworks.",
-      "detailed_description": "Our mobile development services enable organizations to connect with customers and employees through high-performance mobile applications. We design, develop, and deploy scalable and secure apps with responsive UX and native-like performance.",
-      "highlights": [
-        "Native and cross-platform development (iOS, Android, Flutter)",
-        "User-centric UI/UX design",
-        "App store deployment and support"
-      ],
-      "technologies": ["React Native", "Flutter", "Swift & Kotlin", "Firebase"],
-      "case_study": {
-        "title": "Cross-Platform Field Service App",
-        "summary": "Delivered a Flutter-based mobile app for a utilities company, improving field service reporting speed by 70%."
-      },
-      "cta_label": "Build Your Mobile App with Us",
-      "link": "/capabilities/mobile-development",
-      "image": "/compressed/pexels-photo-1181244.webp"
-    },
-    {
       "title": "Cloud Infrastructure",
       "slug": "cloud-infrastructure",
       "description": "Our cloud solutions enhance agility and scalability, helping you modernize your IT ecosystem securely and efficiently.",
@@ -241,6 +194,34 @@
       "cta_label": "Ensure Your App Works Flawlessly",
       "link": "/capabilities/functional-testing",
       "image": "/compressed/pexels-photo-3861973.webp"
+    },
+    {
+      "title": "ADA Compliance & Accessibility Testing",
+      "slug": "accessibility-testing",
+      "description": "Ensure your digital platforms are inclusive and legally compliant with WCAG 2.1 and Section 508 standards.",
+      "detailed_description": "At Aloha Technologies and Management Consulting LLC, we are committed to building inclusive digital experiences. Our ADA compliance and accessibility testing services ensure that state applications and websites are accessible to users of all abilities. We conduct thorough evaluations using both automated and manual tools to identify and eliminate accessibility barriers, helping organizations meet compliance and enhance usability.",
+      "highlights": [
+        "Keyboard navigation and screen reader compatibility",
+        "Color contrast and text readability",
+        "Alt text validation and semantic HTML structure",
+        "Form labels, error messages, and focus indicators",
+        "Mobile accessibility and responsive layout testing"
+      ],
+      "technologies": [
+        "Axe",
+        "WAVE",
+        "NVDA",
+        "VoiceOver",
+        "Lighthouse",
+        "Manual Auditing"
+      ],
+      "case_study": {
+        "title": "Accessibility Audit for State Services Portal",
+        "summary": "Performed a full accessibility evaluation of a public services website, ensuring WCAG 2.1 AA compliance and significantly improving screen reader navigation and keyboard usability."
+      },
+      "cta_label": "Make Your Platform Inclusive",
+      "link": "/capabilities/accessibility-testing",
+      "image": "/compressed/pexels-pavel-danilyuk-7055876.webp"
     },
     {
       "title": "REST API Testing",
@@ -298,6 +279,25 @@
       "cta_label": "Boost Your App's Performance",
       "link": "/capabilities/performance-testing",
       "image": "/compressed/pexels-photo-3861970.webp"
+    },
+    {
+      "title": "Mobile Development",
+      "slug": "mobile-development",
+      "description": "We build seamless mobile applications tailored to your business needs on Android, iOS, and cross-platform frameworks.",
+      "detailed_description": "Our mobile development services enable organizations to connect with customers and employees through high-performance mobile applications. We design, develop, and deploy scalable and secure apps with responsive UX and native-like performance.",
+      "highlights": [
+        "Native and cross-platform development (iOS, Android, Flutter)",
+        "User-centric UI/UX design",
+        "App store deployment and support"
+      ],
+      "technologies": ["React Native", "Flutter", "Swift & Kotlin", "Firebase"],
+      "case_study": {
+        "title": "Cross-Platform Field Service App",
+        "summary": "Delivered a Flutter-based mobile app for a utilities company, improving field service reporting speed by 70%."
+      },
+      "cta_label": "Build Your Mobile App with Us",
+      "link": "/capabilities/mobile-development",
+      "image": "/compressed/pexels-photo-1181244.webp"
     }
   ],
   "industries": [

@@ -27,7 +27,7 @@ export default function Home() {
             </h1>
             <p className="mb-6">
               Delivering IT excellence with global development centers in
-              Hawaii, USA and India.
+              Hawai'i, USA and India.
             </p>
             <Link to="/about">
               <Button className="bg-white text-black font-bold">

@@ -62,7 +62,7 @@ export default function About() {
           centers in the USA and India, our seasoned professionals have
           delivered innovative solutions, including testing services for KOLEA
           MES M&O, BENEFIT, EMPLOYMENT AND SUPPORT SERVICES DIVISION (BESSD) in
-          Hawaii, and AEM implementation for KOLEA with partners like Speridian,
+          Hawai'i, and AEM implementation for KOLEA with partners like Speridian,
           eWorld ES, and Hoike Networks, Inc. dba Pacxa. Our collaborative
           approach and commitment to quality ensure we deliver transformative
           solutions that meet unique business needs.
@@ -73,11 +73,11 @@ export default function About() {
           banner—Aloha Technologies and Management Consulting LLC (ATMC) has
           earned a reputation as a reliable and results-driven partner for
           organizations around the globe. Our teams operate from advanced
-          development centers in both Hawaii and India, delivering innovative,
-          high-impact solutions across public and private sectors. At ATMC, we
-          believe in a collaborative, quality-first approach—tailoring every
-          engagement to meet our clients’ unique business goals and drive
-          lasting impact.
+          development centers in both Hawai'i, USA and India, delivering
+          innovative, high-impact solutions across public and private sectors.
+          At ATMC, we believe in a collaborative, quality-first
+          approach—tailoring every engagement to meet our clients’ unique
+          business goals and drive lasting impact.
         </p>
       </section>
       <section>

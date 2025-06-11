@@ -36,10 +36,10 @@ export default function Footer() {
           <h3 className="font-semibold text-foreground">Contact</h3>
           <p>
             <a
-              href="mailto:joelvpati@alohatmconsulting.com"
+              href="mailto:support@alohatmconsulting.com"
               className="underline hover:text-foreground"
             >
-              joelvpati@alohatmconsulting.com
+              support@alohatmconsulting.com
             </a>
           </p>
         </address>
