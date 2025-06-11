@@ -158,6 +158,34 @@
   ],
   "capabilities": [
     {
+      "title": "ADA Compliance & Accessibility Testing",
+      "slug": "accessibility-testing",
+      "description": "Ensure your digital platforms are inclusive and legally compliant with WCAG 2.1 and Section 508 standards.",
+      "detailed_description": "At Aloha Technologies and Management Consulting LLC, we are committed to building inclusive digital experiences. Our ADA compliance and accessibility testing services ensure that state applications and websites are accessible to users of all abilities. We conduct thorough evaluations using both automated and manual tools to identify and eliminate accessibility barriers, helping organizations meet compliance and enhance usability.",
+      "highlights": [
+        "Keyboard navigation and screen reader compatibility",
+        "Color contrast and text readability",
+        "Alt text validation and semantic HTML structure",
+        "Form labels, error messages, and focus indicators",
+        "Mobile accessibility and responsive layout testing"
+      ],
+      "technologies": [
+        "Axe",
+        "WAVE",
+        "NVDA",
+        "VoiceOver",
+        "Lighthouse",
+        "Manual Auditing"
+      ],
+      "case_study": {
+        "title": "Accessibility Audit for State Services Portal",
+        "summary": "Performed a full accessibility evaluation of a public services website, ensuring WCAG 2.1 AA compliance and significantly improving screen reader navigation and keyboard usability."
+      },
+      "cta_label": "Make Your Platform Inclusive",
+      "link": "/capabilities/accessibility-testing",
+      "image": "/compressed/pexels-pavel-danilyuk-7055876.webp"
+    },
+    {
       "title": "Mobile Development",
       "slug": "mobile-development",
       "description": "We build seamless mobile applications tailored to your business needs on Android, iOS, and cross-platform frameworks.",

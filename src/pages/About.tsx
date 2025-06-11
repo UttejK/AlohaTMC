@@ -54,7 +54,7 @@ export default function About() {
 
       <section>
         <h2 className="text-2xl font-semibold mb-3">Our History</h2>
-        <p className="text-gray-700 dark:text-gray-300">
+        {/* <p className="text-gray-700 dark:text-gray-300">
           With three years of dedicated service and over 20 years of cumulative
           expertise in IT and management consulting, Aloha Technologies and
           Management Consulting LLC has established itself as a trusted partner
@@ -66,6 +66,18 @@ export default function About() {
           eWorld ES, and Hoike Networks, Inc. dba Pacxa. Our collaborative
           approach and commitment to quality ensure we deliver transformative
           solutions that meet unique business needs.
+        </p> */}
+        <p className="text-gray-700 dark:text-gray-300">
+          With over 20 years of combined experience in IT and management
+          consulting and three years of focused service under our current
+          banner—Aloha Technologies and Management Consulting LLC (ATMC) has
+          earned a reputation as a reliable and results-driven partner for
+          organizations around the globe. Our teams operate from advanced
+          development centers in both Hawaii and India, delivering innovative,
+          high-impact solutions across public and private sectors. At ATMC, we
+          believe in a collaborative, quality-first approach—tailoring every
+          engagement to meet our clients’ unique business goals and drive
+          lasting impact.
         </p>
       </section>
       <section>

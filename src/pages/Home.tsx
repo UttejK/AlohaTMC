@@ -26,8 +26,8 @@ export default function Home() {
               Empowering Enterprises with Innovation
             </h1>
             <p className="mb-6">
-              Delivering IT excellence with global development centers in the
-              USA and India.
+              Delivering IT excellence with global development centers in
+              Hawaii, USA and India.
             </p>
             <Link to="/about">
               <Button className="bg-white text-black font-bold">
