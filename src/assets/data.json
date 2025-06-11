@@ -198,8 +198,8 @@
     {
       "title": "ADA Compliance & Accessibility Testing",
       "slug": "accessibility-testing",
-      "description": "Ensure your digital platforms are inclusive and legally compliant with WCAG 2.1 and Section 508 standards.",
-      "detailed_description": "At Aloha Technologies and Management Consulting LLC, we are committed to building inclusive digital experiences. Our ADA compliance and accessibility testing services ensure that state applications and websites are accessible to users of all abilities. We conduct thorough evaluations using both automated and manual tools to identify and eliminate accessibility barriers, helping organizations meet compliance and enhance usability.",
+      "description": "ADA compliance and accessibility testing services ensure state applications and websites are accessible to users of all abilities, aligning with WCAG 2.1 standards and Section 508 compliance requirements.",
+      "detailed_description": "At Aloha Technologies and Management Consulting LLC, we are committed to building inclusive digital experiences. Our ADA compliance and accessibility testing services ensure state applications and websites are accessible to users of all abilities, aligning with WCAG 2.1 standards and Section 508 compliance requirements. We incorporate both automated tools and manual testing tools, we help identify and remediate barriers that may prevent individuals with disabilities from effectively using State platforms. Our goal is not only to ensure legal compliance, but also to support organisations in creating a more inclusive and user-friendly digital environment. We help to make accessibility a core part of digital strategy.",
       "highlights": [
         "Keyboard navigation and screen reader compatibility",
         "Color contrast and text readability",
@@ -208,18 +208,19 @@
         "Mobile accessibility and responsive layout testing"
       ],
       "technologies": [
-        "Axe",
         "WAVE",
+        "Axe",
         "NVDA",
         "VoiceOver",
         "Lighthouse",
-        "Manual Auditing"
+        "JAWS",
+        "Manual Audits"
       ],
       "case_study": {
         "title": "Accessibility Audit for State Services Portal",
-        "summary": "Performed a full accessibility evaluation of a public services website, ensuring WCAG 2.1 AA compliance and significantly improving screen reader navigation and keyboard usability."
+        "summary": "Conducted end-to-end accessibility testing for a large state portal, resolving 250+ WCAG 2.1 violations and significantly improving usability for screen reader and keyboard users."
       },
-      "cta_label": "Make Your Platform Inclusive",
+      "cta_label": "Ensure ADA Compliance",
       "link": "/capabilities/accessibility-testing",
       "image": "/compressed/pexels-pavel-danilyuk-7055876.webp"
     },
