@@ -6,50 +6,52 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export async function uploadFileToGofile(file: File): Promise<string> {
-  const formData = new FormData();
-  formData.append("file", file);
+// export async function uploadFileToGofile(file: File): Promise<string> {
+//   const formData = new FormData();
+//   formData.append("file", file);
 
-  const res = await fetch("https://upload.gofile.io/uploadfile", {
-    method: "POST",
-    body: formData,
-    headers: {
-      Authorization: ("Bearer " + import.meta.env.VITE_GO_FILE) as string,
-    },
-  });
+//   const res = await fetch("https://upload.gofile.io/uploadfile", {
+//     method: "POST",
+//     body: formData,
+//     headers: {
+//       Authorization: ("Bearer " + import.meta.env.VITE_GO_FILE) as string,
+//     },
+//   });
 
-  const json = await res.json();
+//   const json = await res.json();
 
-  if (json.status !== "ok") {
-    throw new Error("File upload failed");
-  }
+//   if (json.status !== "ok") {
+//     throw new Error("File upload failed");
+//   }
 
-  return json.data.downloadPage;
-}
+//   return json.data.downloadPage;
+// }
+
 export async function sendEmail({
   name,
   email,
   subject,
   message,
-  files = [],
-}: {
+}: // files = [],
+{
   name: string;
   email: string;
   subject?: string;
   message: string;
   files?: File[];
 }) {
-  const toastId = toast.loading("Uploading files...");
+  // const toastId = toast.loading("Uploading files...");
+  const toastId = toast.loading("Sending message...");
 
   try {
-    const links: string[] = [];
+    // const links: string[] = [];
 
-    for (const file of files) {
-      const url = await uploadFileToGofile(file);
-      links.push(`${file.name}: ${url}`);
-    }
+    // for (const file of files) {
+    //   const url = await uploadFileToGofile(file);
+    //   links.push(`${file.name}: ${url}`);
+    // }
 
-    const fullMessage = `${message}\n\nUploaded Files:\n${links.join("\n")}`;
+    const fullMessage = `${message}`; //\n\nUploaded Files:\n${links.join("\n")}
 
     const formData = new FormData();
     formData.append("access_key", import.meta.env.VITE_ACCESS_TOKEN as string);
@@ -69,7 +71,7 @@ export async function sendEmail({
 
     toast.success("Message sent with file links!", { id: toastId });
   } catch (err) {
-    toast.error("Failed to send message or upload files", { id: toastId });
+    toast.error("Failed to send message", { id: toastId }); // or upload files
     throw err;
   }
 }
