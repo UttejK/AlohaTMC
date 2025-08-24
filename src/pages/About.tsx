@@ -1,5 +1,6 @@
 import data from "@/assets/data.json";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const capabilities = data.capabilities;
@@ -88,11 +89,11 @@ export default function About() {
                 <p className="text-sm text-muted-foreground">
                   {capability.description}
                 </p>
-                <a href={capability.link}>
+                <Link to={capability.link}>
                   <Button className="text-sm hover:underline font-medium">
                     Know more →
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

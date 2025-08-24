@@ -2,6 +2,7 @@ import data from "@/assets/data.json";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const services = data.services;
 
@@ -29,11 +30,11 @@ export default function Home() {
               Delivering IT excellence with global development centers in
               Hawai'i, USA and India.
             </p>
-            <a href="/about">
-              <Button className="bg-white text-black font-bold">
+            <Link to="/about">
+              <Button variant="secondary" className="font-bold">
                 Who We Are
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -50,9 +51,9 @@ export default function Home() {
           Competence, and Client Commitment—we enable innovation with
           confidence.
         </p>
-        <a href="/about">
+        <Link to="/about">
           <Button>Read More</Button>
-        </a>
+        </Link>
       </section>
 
       {/* Services */}
@@ -115,12 +116,12 @@ export default function Home() {
           © 2025 Aloha Technologies and Management Consulting LLC
         </p>
         <div className="space-x-4">
-          <a href="/about" className="hover:underline">
+          <Link to="/about" className="hover:underline">
             About
-          </a>
-          <a href="/careers" className="hover:underline">
+          </Link>
+          <Link to="/careers" className="hover:underline">
             Careers
-          </a>
+          </Link>
         </div>
       </footer>
     </div>
@@ -161,9 +162,9 @@ export const HomeCard = React.memo(function HomeCard({
         <h3 className="text-white text-xl font-semibold">{title}</h3>
         <p className="mt-2 text-sm text-gray-100">{description}</p>
         <div className="mt-4 flex justify-end">
-          <a href={link}>
+          <Link to={link}>
             <Button className="text-sm">Know more →</Button>
-          </a>
+          </Link>
         </div>
       </div>
     </Card>

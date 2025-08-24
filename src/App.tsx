@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { Toaster } from "./components/ui/sonner";
 import { ThemeProvider } from "./context/ThemeContext";
+import ScrollToTop from "./lib/ScrollToTop";
 import About from "./pages/About";
 import CapabilityDetail from "./pages/CapabilityDetail";
 import Careers from "./pages/Careers";
@@ -18,6 +19,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">

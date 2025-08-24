@@ -1,5 +1,6 @@
 import data from "@/assets/data.json";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const servicesData = data.services;
@@ -23,9 +24,9 @@ export default function Services() {
                 {service.description}
               </p>
               <span className="inline-block mt-4 text-primary font-medium group-hover:underline">
-                <a href={service.link} className="group">
+                <Link to={service.link} className="group">
                   <Button>Know more →</Button>
-                </a>
+                </Link>
               </span>
             </div>
           </div>

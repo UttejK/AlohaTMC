@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function Industries() {
   const industries = data.industries;
@@ -36,11 +37,11 @@ export default function Industries() {
               {description}
             </CardContent>
             <CardFooter>
-              <a href={link}>
+              <Link to={link}>
                 <Button className="font-semibold hover:underline">
                   Know more →
                 </Button>
-              </a>
+              </Link>
             </CardFooter>
           </Card>
         ))}
