@@ -2,7 +2,6 @@ import data from "@/assets/data.json";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const services = data.services;
 
@@ -30,11 +29,11 @@ export default function Home() {
               Delivering IT excellence with global development centers in
               Hawai'i, USA and India.
             </p>
-            <Link to="/about">
+            <a href="/about">
               <Button className="bg-white text-black font-bold">
                 Who We Are
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -51,9 +50,9 @@ export default function Home() {
           Competence, and Client Commitment—we enable innovation with
           confidence.
         </p>
-        <Link to="/about">
+        <a href="/about">
           <Button>Read More</Button>
-        </Link>
+        </a>
       </section>
 
       {/* Services */}
@@ -116,12 +115,12 @@ export default function Home() {
           © 2025 Aloha Technologies and Management Consulting LLC
         </p>
         <div className="space-x-4">
-          <Link to="/about" className="hover:underline">
+          <a href="/about" className="hover:underline">
             About
-          </Link>
-          <Link to="/careers" className="hover:underline">
+          </a>
+          <a href="/careers" className="hover:underline">
             Careers
-          </Link>
+          </a>
         </div>
       </footer>
     </div>
@@ -162,9 +161,9 @@ export const HomeCard = React.memo(function HomeCard({
         <h3 className="text-white text-xl font-semibold">{title}</h3>
         <p className="mt-2 text-sm text-gray-100">{description}</p>
         <div className="mt-4 flex justify-end">
-          <Link to={link}>
+          <a href={link}>
             <Button className="text-sm">Know more →</Button>
-          </Link>
+          </a>
         </div>
       </div>
     </Card>

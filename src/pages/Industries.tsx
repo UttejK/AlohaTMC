@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
 import data from "@/assets/data.json";
+import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardHeader,
-  CardTitle,
   CardContent,
   CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 export default function Industries() {
   const industries = data.industries;
@@ -37,11 +36,11 @@ export default function Industries() {
               {description}
             </CardContent>
             <CardFooter>
-              <Link to={link}>
+              <a href={link}>
                 <Button className="font-semibold hover:underline">
                   Know more →
                 </Button>
-              </Link>
+              </a>
             </CardFooter>
           </Card>
         ))}
