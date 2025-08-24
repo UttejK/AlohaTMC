@@ -21,18 +21,18 @@ export default function Careers() {
           <a
             href="mailto:support@alohatmconsulting.com"
             className="text-primary underline hover:text-primary/80"
+            onClick={() => {
+              navigator.clipboard.writeText("support@alohatmconsulting.com");
+              toast.success("Email address copied to clipboard!");
+            }}
           >
             support@alohatmconsulting.com
           </a>
         </p>
         <a
           href="mailto:support@alohatmconsulting.com"
-          className="inline-block bg-primary text-white px-6 py-2 rounded-full shadow hover:bg-primary/90 transition"
+          className="inline-block bg-primary text-white dark:text-black px-6 py-2 rounded-full shadow hover:bg-primary/90 transition"
           aria-label="Send your resume via email"
-          onClick={() => {
-            navigator.clipboard.writeText("support@alohatmconsulting.com");
-            toast.success("Email address copied to clipboard!");
-          }}
         >
           Email Your Resume
         </a>

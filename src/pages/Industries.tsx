@@ -21,7 +21,7 @@ export default function Industries() {
         {industries.map(({ title, description, link, image }) => (
           <Card
             key={title}
-            className="group h-full flex flex-col overflow-hidden hover:shadow-xl transition duration-300 hover:scale-[1.02]"
+            className="group h-full flex flex-col overflow-hidden transition duration-300 hover:scale-[1.02]"
           >
             <div className="h-48 overflow-hidden">
               <img

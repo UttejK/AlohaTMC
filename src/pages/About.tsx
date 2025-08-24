@@ -54,19 +54,6 @@ export default function About() {
 
       <section>
         <h2 className="text-2xl font-semibold mb-3">Our History</h2>
-        {/* <p className="text-gray-700 dark:text-gray-300">
-          With three years of dedicated service and over 20 years of cumulative
-          expertise in IT and management consulting, Aloha Technologies and
-          Management Consulting LLC has established itself as a trusted partner
-          for businesses worldwide. Operating state-of-the-art development
-          centers in the USA and India, our seasoned professionals have
-          delivered innovative solutions, including testing services for KOLEA
-          MES M&O, BENEFIT, EMPLOYMENT AND SUPPORT SERVICES DIVISION (BESSD) in
-          Hawai'i, and AEM implementation for KOLEA with partners like Speridian,
-          eWorld ES, and Hoike Networks, Inc. dba Pacxa. Our collaborative
-          approach and commitment to quality ensure we deliver transformative
-          solutions that meet unique business needs.
-        </p> */}
         <p className="text-gray-700 dark:text-gray-300">
           With over 20 years of combined experience in IT and management
           consulting and three years of focused service under our current
@@ -88,7 +75,7 @@ export default function About() {
           {capabilities.map((capability) => (
             <div
               key={capability.title}
-              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-transform hover:scale-[1.02]"
+              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm transition-transform hover:scale-[1.02]"
             >
               <img
                 src={capability.image}

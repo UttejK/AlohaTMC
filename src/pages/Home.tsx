@@ -1,6 +1,7 @@
 import data from "@/assets/data.json";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const services = data.services;
@@ -134,41 +135,38 @@ type HomeCardProps = {
   image: string;
 };
 
-export const HomeCard = ({
+export const HomeCard = React.memo(function HomeCard({
   title,
   description,
   link,
   image,
-}: HomeCardProps) => {
+}: HomeCardProps) {
   return (
-    <Card className="relative overflow-hidden rounded-xl shadow-md group transition hover:shadow-lg min-h-[320px] hover:cursor-pointer">
+    <Card className="relative overflow-hidden rounded-xl shadow-md group transition-transform duration-300 hover:scale-[1.02] will-change-transform">
       {/* Background Image */}
-      <img
-        src={image}
-        alt={title}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-150 ease-in-out scale-100 group-hover:scale-105"
-      />
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover transform transition-transform duration-300 ease-out group-hover:scale-105 will-change-transform"
+        />
+      </div>
 
-      {/* Translucent overlay for text legibility */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
 
-      {/* Content Container */}
-      <div className="relative z-10 h-full flex flex-col justify-end md:justify-between p-4">
-        {/* Title always visible — slides on hover (desktop) */}
-        <div className="text-white text-xl font-semibold md:group-hover:cursor-pointer">
-          {title}
-        </div>
-
-        {/* Description + CTA - hidden on desktop until hover, always visible on mobile */}
-        <div className="mt-4 text-white opacity-100 duration-300">
-          <p className="text-sm text-gray-100 mb-4">{description}</p>
-          <div className="flex justify-end">
-            <Link to={link}>
-              <Button className="text-sm">Know more →</Button>
-            </Link>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 h-full flex flex-col justify-end p-4">
+        <h3 className="text-white text-xl font-semibold">{title}</h3>
+        <p className="mt-2 text-sm text-gray-100">{description}</p>
+        <div className="mt-4 flex justify-end">
+          <Link to={link}>
+            <Button className="text-sm">Know more →</Button>
+          </Link>
         </div>
       </div>
     </Card>
   );
-};
+});

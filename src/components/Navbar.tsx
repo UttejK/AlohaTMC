@@ -24,12 +24,6 @@ const Navbar: React.FC = () => {
   return (
     <header className="bg-white dark:bg-black shadow-lg sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        {/* <Link
-          to="/"
-          className="text-3xl font-extrabold text-black dark:text-white tracking-tight"
-        >
-          ATMC
-        </Link> */}
         <Link to="/" className="flex items-center space-x-4">
           <img
             src="/ATMC.jpg"
@@ -80,9 +74,9 @@ const Navbar: React.FC = () => {
             >
               <nav className="flex flex-col space-y-6 mt-10">
                 {navLinks.map((link) => (
-                  <Link
+                  <a
                     key={link.name}
-                    to={link.path}
+                    href={link.path}
                     className={cn(
                       "text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 pl-8",
                       "text-xl font-semibold transition-all duration-300",
@@ -91,7 +85,7 @@ const Navbar: React.FC = () => {
                     )}
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 ))}
               </nav>
             </SheetContent>
